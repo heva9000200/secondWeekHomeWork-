@@ -6,11 +6,8 @@
     <link rel="stylesheet" href="css/all.css" />
   </head>
   <body>
-    <div class="header">
-      <div class="header-title">
-        <p>Here’s</p>
-        <h1>JOANNE</h1>
-      </div>
+    <header class="header">
+      <h1 class="header-title"><span>Here’s</span>JOANNE</h1>
       <p class="header-content">
         Founder of ‘’XXXD Official’’<br />
         & Graphic Designer
@@ -37,17 +34,19 @@
           /></a>
         </li>
       </ul>
-    </div>
+    </header>
     <section class="about">
       <h2 class="about-title">About</h2>
       <div class="about-content mb31">
         <img src="img/about-img.png" width="384px" height="384px" alt="" />
-        <p class="about-content-name">Joanne Chen</p>
-        <p class="about-content-birthday">1997/10/10</p>
-        <p class="about-content-txt">
-          National Hex School Normal University<br />
-          Department of Visual Design
-        </p>
+        <ul class="about-content-list">
+          <li class="about-content-list-name">Joanne Chen</li>
+          <li class="about-content-list-birthday">1997/10/10</li>
+          <li class="about-content-list-txt">
+            National Hex School Normal University<br />
+            Department of Visual Design
+          </li>
+        </ul>
         <div class="about-content-line"></div>
       </div>
       <ul class="about-list">
@@ -78,7 +77,7 @@
         height="416px"
       />
       <div class="idea-secondPart">
-        <img src="img/idea-two.png" alt="" />
+        <img src="img/idea-two.png" class="mr24" alt="" />
         <img src="img/idea-three.png" alt="" />
       </div>
     </section>
@@ -89,22 +88,23 @@
         海報/廣告/攝影/LOGO/3D
       </p>
       <div class="work-list">
-        <ul class="work-list-item">
-          <li class="work-list-item-firstPart">
+        <ul class="work-list-item mb56">
+          <li class="work-list-item-firstPart mr24">
             <img
               src="img/work-one-one.png"
               class="work-list-item-firstPart-img"
               alt=""
             />
-            海報設計/2017
+
+            <span class="work-list-item-firstPart-string">海報設計/2018</span>
           </li>
-          <li class="work-list-item-firstPart">
+          <li class="work-list-item-firstPart mr24">
             <img
               src="img/work-one-two.png"
               class="work-list-item-firstPart-img"
               alt=""
             />
-            海報設計/2018
+            <span class="work-list-item-firstPart-string">海報設計/2018</span>
           </li>
           <li class="work-list-item-firstPart">
             <img
@@ -112,17 +112,18 @@
               class="work-list-item-firstPart-img"
               alt=""
             />
-            海報設計/2018
+            <span class="work-list-item-firstPart-string">海報設計/2018</span>
           </li>
         </ul>
-        <ul class="work-list-item">
-          <li class="work-list-item-secondPart">
+        <ul class="work-list-item mb56">
+          <li class="work-list-item-secondPart mr24">
             <img
               src="img/work-two-one.png"
               class="work-list-item-secondPart-img"
               alt=""
             />
-            概念攝影/2018
+
+            <span class="work-list-item-secondPart-string">概念攝影/2018</span>
           </li>
           <li class="work-list-item-secondPart">
             <img
@@ -130,25 +131,29 @@
               class="work-list-item-secondPart-img"
               alt=""
             />
-            概念攝影/2018
+            <span class="work-list-item-secondPart-string">概念攝影/2018</span>
           </li>
         </ul>
         <ul class="work-list-item">
-          <li class="work-list-item-thirdPart">
+          <li class="work-list-item-thirdPart mr24">
             <img
               src="img/work-three-one.png"
               class="work-list-item-thirdPart-img"
               alt=""
             />
-            sasa 酒標設計/2019
+            <span class="work-list-item-thirdPart-string"
+              >sasa 酒標設計/2019</span
+            >
           </li>
-          <li class="work-list-item-thirdPart">
+          <li class="work-list-item-thirdPart mr24">
             <img
               src="img/work-three-two.png"
               class="work-list-item-thirdPart-img"
               alt=""
             />
-            攝影創作/2018
+            <span class="work-list-item-thirdPart-string"
+              >sasa 酒標設計/2019</span
+            >
           </li>
           <li class="work-list-item-thirdPart">
             <img
@@ -156,15 +161,26 @@
               class="work-list-item-thirdPart-img"
               alt=""
             />
-            官網設計/2020
+            <span class="work-list-item-thirdPart-string"
+              >sasa 酒標設計/2019</span
+            >
           </li>
         </ul>
       </div>
     </section>
-    <div class="footer text-center">
-      <p class="h2 footer-string">Contact</p>
-      <p class="footer-string">Mail：xxxd@hexschool.com</p>
-      <p class="footer-string">Phone Number：0910123456</p>
-    </div>
+
+    <footer class="footer text-center">
+      <p class="footer-txt">Contact</p>
+      <address class="footer-address">
+        Mail：
+        <a class="d-inline-block footer-string" href="mailto:xxxd@hexschool.com"
+          >xxxd@hexschool.com</a
+        ><br />
+        Phone Number：
+        <a class="d-inline-block footer-string" href="tel:+886-910123456"
+          >0910123456</a
+        >
+      </address>
+    </footer>
   </body>
 </html>

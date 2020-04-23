@@ -1,23 +1,10 @@
 $danger: #891818; //洪
 $secondary: #707070; //灰
-
-h1 {
-  font-size: 80px;
-  line-height: 106px;
-}
-h2,
-.h2 {
-  font-size: 64px;
-  line-height: 84px;
-}
-li,
-p {
-  font-size: 24px;
-  line-height: 42px;
-}
-.p {
-  font-size: 20px;
-  line-height: 42px;
+@mixin font($sz, $lh) {
+  font-size: $sz;
+  line-height: $lh;
+  font-family: 'Roboto', sans-serif;
+  font-style: italic;
 }
 .mb31 {
   margin-bottom: 31px;
@@ -25,11 +12,18 @@ p {
 .mb48 {
   margin-bottom: 48px;
 }
-
+.mr24 {
+  margin-right: 24px;
+}
+.mb56 {
+  margin-bottom: 56px;
+}
 // 內容
 
 .header {
   background-image: url('../img/header-bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
   height: 960px;
   border: 1px solid $secondary;
   opacity: 1;
@@ -39,9 +33,16 @@ p {
   align-items: center;
   color: #ffffff;
   letter-spacing: 0px;
+  &-title span,
+  &-content {
+    @include font(24px, 42px);
+    font-weight: bold;
+  }
   &-title {
-    p {
+    @include font(80px, 94px);
+    span {
       margin-bottom: -11px;
+      display: block;
     }
     margin-bottom: 27px;
   }
@@ -58,25 +59,33 @@ p {
 .about {
   padding: 55px 0 56px;
   text-align: center;
-  font-weight: bold;
   &-title {
     margin-bottom: 39px;
+    @include font(64px, 75px);
   }
   &-content {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-weight: bold;
     img {
       margin-bottom: 24px;
     }
-    &-name,
-    &-birthday {
-      margin-bottom: 4px;
+    &-list,
+    &-list-name,
+    &-list-birthday,
+    &-list-txt {
+      @include font(24px, 42px);
+      &-name,
+      &-birthday {
+        margin-bottom: 4px;
+      }
+      &-txt {
+        margin-bottom: 31px;
+        line-height: 36px;
+      }
     }
-    &-txt {
-      margin-bottom: 31px;
-      line-height: 36px;
-    }
+
     &-line {
       border: 1px solid #000;
       width: 384px;
@@ -86,18 +95,17 @@ p {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    font-weight: bold;
     &-item {
       margin-left: 26px;
+      @include font(24px, 42px);
       &-ball {
         position: relative;
         &::before {
           content: '';
-          width: 22px;
-          height: 22px;
-          border-radius: 50%;
-          background: #891818;
+          @include ball(22px, $danger);
           position: absolute;
-          top: 8px;
+          top: 3px;
           left: -36px;
         }
       }
@@ -110,9 +118,14 @@ p {
   color: #fff;
   &-title {
     margin-bottom: 12px;
+    @include font(64px, 75px);
+  }
+  &-txt {
+    @include font(20px, 42px);
   }
   &-string {
     margin-bottom: 31px;
+    @include font(24px, 42px);
   }
   &-firstPart {
     margin-bottom: 40px;
@@ -123,57 +136,99 @@ p {
     img {
       width: 588px;
       height: 416px;
-      margin-right: 24px;
     }
   }
 }
 .work {
-  padding-top: 56px;
   &-title {
-    margin-bottom: 23px;
+    margin-top: 64px;
+    margin-bottom: 24px;
+    @include font(64px, 75px);
   }
   &-string {
-    margin-bottom: 100px;
+    margin-bottom: 128px;
+    @include font(20px, 42px);
   }
   &-list {
     color: #fff;
     height: 1558px;
     background-image: url('../img/work-bg.png');
-    li {
-      margin-right: 24px;
-      font-size: 20px;
-      margin-top: -80px;
-    }
+    background-position: center;
+    background-repeat: no-repeat;
     &-item {
-      margin-bottom: 140px;
       display: flex;
       justify-content: center;
+      span {
+        @include font(20px, 42px);
+        display: block;
+      }
       &-firstPart {
+        margin-top: -80px;
         &-img {
           width: 384px;
           height: 528px;
+          margin-bottom: 16px;
         }
       }
       &-secondPart {
         &-img {
           width: 588px;
           height: 424px;
+          margin-bottom: 16px;
         }
       }
       &-thirdPart {
         &-img {
           width: 384px;
           height: 280px;
+          margin-bottom: 16px;
         }
       }
     }
+    // &-item {
+    //   margin-bottom: 140px;
+    //   display: flex;
+    //   justify-content: center;
+    //   &-firstPart {
+    //     &-img {
+    //       width: 384px;
+    //       height: 528px;
+    //     }
+    //   }
+    //   &-secondPart {
+    //     &-img {
+    //       width: 588px;
+    //       height: 424px;
+    //     }
+    //   }
+    //   &-thirdPart {
+    //     &-img {
+    //       width: 384px;
+    //       height: 280px;
+    //     }
+    //   }
+    // }
   }
 }
 .footer {
   padding: 56px 0 64px;
   background: #000;
   color: #fff;
+  &-txt {
+    margin-bottom: 16px;
+    @include font(64px, 75px);
+  }
   &-string {
     margin-bottom: 16px;
+  }
+  &-address {
+    @include font(24px, 36px);
+    a {
+      color: #fff;
+      @include font(24px, 36px);
+      &:hover {
+        border-bottom: 1px solid #fff;
+      }
+    }
   }
 }

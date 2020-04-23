@@ -1,0 +1,7 @@
+// 圓球
+@mixin ball($size, $color) {
+  width: $size;
+  height: $size;
+  border-radius: 50%;
+  background: $color;
+}
