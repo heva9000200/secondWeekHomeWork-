@@ -4,31 +4,34 @@
     <meta charset="UTF-8" />
     <title>第二周作業</title>
     <link rel="stylesheet" href="css/all.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header class="header">
-      <h1 class="header-title"><span>Here’s</span>JOANNE</h1>
-      <p class="header-content">
+      <h1 data-aos="zoom-in" data-aos-delay="250" class="header-title">
+        <span>Here’s</span>JOANNE
+      </h1>
+      <p data-aos="zoom-in-up " data-aos-delay="350" class="header-content">
         Founder of ‘’XXXD Official’’<br />
         & Graphic Designer
       </p>
       <ul class="header-list">
-        <li class="header-list-item">
+        <li class="header-list-item" data-aos="fade-right" data-aos-delay="350">
           <a href="#"
             ><img src="img/be.svg" width="60px" height="60px" alt=""
           /></a>
         </li>
-        <li class="header-list-item">
+        <li class="header-list-item" data-aos="fade-right" data-aos-delay="450">
           <a href="#"
             ><img src="img/facebook.svg" width="60px" height="60px" alt=""
           /></a>
         </li>
-        <li class="header-list-item">
+        <li class="header-list-item" data-aos="fade-right" data-aos-delay="550">
           <a href="#"
             ><img src="img/ig.svg" width="60px" height="60px" alt=""
           /></a>
         </li>
-        <li class="header-list-item">
+        <li class="header-list-item" data-aos="fade-right" data-aos-delay="650">
           <a href="#"
             ><img src="img/youtue.svg" width="60px" height="60px" alt=""
           /></a>
@@ -36,13 +39,36 @@
       </ul>
     </header>
     <section class="about">
-      <h2 class="about-title">About</h2>
+      <h2 class="about-title" data-aos="flip-left">About</h2>
       <div class="about-content mb31">
-        <img src="img/about-img.png" width="384px" height="384px" alt="" />
+        <img
+          src="img/about-img.png"
+          width="384px"
+          height="384px"
+          alt=""
+          data-aos="fade-up"
+          data-aos-duration="3000"
+        />
         <ul class="about-content-list">
-          <li class="about-content-list-name">Joanne Chen</li>
-          <li class="about-content-list-birthday">1997/10/10</li>
-          <li class="about-content-list-txt">
+          <li
+            data-aos="fade-right"
+            data-aos-delay="600"
+            class="about-content-list-name"
+          >
+            Joanne Chen
+          </li>
+          <li
+            data-aos="fade-left"
+            data-aos-delay="600"
+            class="about-content-list-birthday"
+          >
+            1997/10/10
+          </li>
+          <li
+            class="about-content-list-txt"
+            data-aos="flip-up"
+            data-aos-delay="600"
+          >
             National Hex School Normal University<br />
             Department of Visual Design
           </li>
@@ -50,49 +76,65 @@
         <div class="about-content-line"></div>
       </div>
       <ul class="about-list">
-        <li class="about-list-item">
+        <li class="about-list-item" data-aos="fade-right" data-aos-delay="600">
           <span class="about-list-item-ball"></span>Founder of ‘’XXXD Official’’
         </li>
-        <li class="about-list-item">
+        <li class="about-list-item" data-aos="fade-right" data-aos-delay="600">
           <span class="about-list-item-ball"></span>Graphic Designer
         </li>
-        <li class="about-list-item">
+        <li class="about-list-item" data-aos="fade-right" data-aos-delay="600">
           <span class="about-list-item-ball"></span>Graphic Intern of Hex School
         </li>
       </ul>
     </section>
     <section class="idea text-center">
-      <h2 class="idea-title">My Brand ‘’XXXD’’</h2>
-      <p class="idea-string mb31">Just Keep XXXD Everyday</p>
-      <p class="p idea-txt mb48">
-        2020 年創立的個人服飾品牌<br />
-        引領叛逆少年開啟與社會對話的窗口<br />
-        主打概念潮流T-Shirt
-      </p>
+      <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
+        <h2 class="idea-title">My Brand ‘’XXXD’’</h2>
+        <p class="idea-string mb31">Just Keep XXXD Everyday</p>
+        <p class="p idea-txt mb48">
+          2020 年創立的個人服飾品牌<br />
+          引領叛逆少年開啟與社會對話的窗口<br />
+          主打概念潮流T-Shirt
+        </p>
+      </div>
+
       <img
         src="img/idea-one.png"
         alt=""
         class="mx-auto idea-firstPart"
         width="792px"
         height="416px"
+        data-aos="flip-up"
       />
       <div class="idea-secondPart">
-        <img src="img/idea-two.png" class="mr24" alt="" />
-        <img src="img/idea-three.png" alt="" />
+        <img src="img/idea-two.png" class="mr24" alt="" data-aos="flip-up" />
+        <img src="img/idea-three.png" alt="" data-aos="flip-up" />
       </div>
     </section>
     <section class="work text-center">
-      <h2 class="work-title">Other Works</h2>
-      <p class="p work-string font-weight-bold">
-        2016-2020 年累積的作品<br />
-        海報/廣告/攝影/LOGO/3D
-      </p>
+      <div
+        data-aos="fade-right"
+        data-aos-offset="300"
+        data-aos-easing="ease-in-sine"
+      >
+        <h2 class="work-title">Other Works</h2>
+        <p class="p work-string font-weight-bold">
+          2016-2020 年累積的作品<br />
+          海報/廣告/攝影/LOGO/3D
+        </p>
+      </div>
+
       <div class="work-list">
         <ul class="work-list-item mb56">
           <li class="work-list-item-firstPart mr24">
             <img
               src="img/work-one-one.png"
               class="work-list-item-firstPart-img"
+              data-aos="flip-up"
               alt=""
             />
 
@@ -103,6 +145,7 @@
               src="img/work-one-two.png"
               class="work-list-item-firstPart-img"
               alt=""
+              data-aos="flip-up"
             />
             <span class="work-list-item-firstPart-string">海報設計/2018</span>
           </li>
@@ -111,6 +154,7 @@
               src="img/work-one-three.png"
               class="work-list-item-firstPart-img"
               alt=""
+              data-aos="flip-up"
             />
             <span class="work-list-item-firstPart-string">海報設計/2018</span>
           </li>
@@ -121,6 +165,7 @@
               src="img/work-two-one.png"
               class="work-list-item-secondPart-img"
               alt=""
+              data-aos="flip-up"
             />
 
             <span class="work-list-item-secondPart-string">概念攝影/2018</span>
@@ -130,6 +175,7 @@
               src="img/work-two-two.png"
               class="work-list-item-secondPart-img"
               alt=""
+              data-aos="flip-up"
             />
             <span class="work-list-item-secondPart-string">概念攝影/2018</span>
           </li>
@@ -140,6 +186,7 @@
               src="img/work-three-one.png"
               class="work-list-item-thirdPart-img"
               alt=""
+              data-aos="flip-up"
             />
             <span class="work-list-item-thirdPart-string"
               >sasa 酒標設計/2019</span
@@ -150,6 +197,7 @@
               src="img/work-three-two.png"
               class="work-list-item-thirdPart-img"
               alt=""
+              data-aos="flip-up"
             />
             <span class="work-list-item-thirdPart-string"
               >sasa 酒標設計/2019</span
@@ -160,6 +208,7 @@
               src="img/work-three-three.png"
               class="work-list-item-thirdPart-img"
               alt=""
+              data-aos="flip-up"
             />
             <span class="work-list-item-thirdPart-string"
               >sasa 酒標設計/2019</span
@@ -169,7 +218,12 @@
       </div>
     </section>
 
-    <footer class="footer text-center">
+    <footer
+      class="footer text-center"
+      data-aos="fade-right"
+      data-aos-offset="300"
+      data-aos-easing="ease-in-sine"
+    >
       <p class="footer-txt">Contact</p>
       <address class="footer-address">
         Mail：
@@ -182,5 +236,9 @@
         >
       </address>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
   </body>
 </html>
